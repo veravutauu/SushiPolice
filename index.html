@@ -4,225 +4,321 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/intro-header.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-
+    <script src="js/script.js" charset="utf-8"></script>
     <title>Test</title>
   </head>
   <body>
+
+    <div id="scroll-top-button">
+      <img src="img/scrolltop.png" alt="TOP">
+    </div>
+
+    <!-- INTRO TOP PAGE -->
+    <div class="intro-header">
+
+      <div id="scroll-down-section-1">
+        <a href="#current-situation"><span></span>Scroll</a>
+      </div>
+      
+      <div class="clip-base clip-1">
+        <div class="clip-image-wrapper">
+          <div class="relative-wrapper">
+            <img src="img/honda_c37_cropped.png" />
+          </div>
+        </div>
+      </div>
+
+      <div class="clip-base clip-dummy-slope">
+      </div>
+
+      <div class="clip-base clip-2">
+        <div class="clip-image-wrapper">
+          <div class="relative-wrapper">
+             <img src="img/suzuki_c66_cropped.png" />
+           </div>
+        </div>
+      </div>
+
+      <div class="clip-base clip-3">
+        <div class="clip-image-wrapper">
+          <div class="relative-wrapper">
+            <img src="img/kawasaki_c21_cropped.png" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- INTRO TOP PAGE END -->
+
     <div class="content">
 
       <div class="right-pane">
-
       </div>
 
-      <div class="section section-padding">
-        <h2>日本食の現状</h2>
-        <h4>The current situation</h4>
-        <div class="underline"></div>
-        <p>「日本食」が世界遺産担って世界で大ブームの日本食。健康に良いし、わびさびの美学など魅力が詰まった日本食。海外の日本食レストランは
-            2015年に約8.9万店が現在約11.8万店に追加すした。</p>
-        <img class="big-img" src="img/restaurant.jpg" alt="restaurant">
-        <p>海外で和食ファンが増えているが、</p>
-        <p>しかし、海外で人気のある日本食レストランにおいて、オーナーやシェフ、従業員の8割以上が『和食を食べたことがない』『日本人では無い』
-        『日本に行ったこと無い』。</p>
+      <div class="max-width-content">
 
-        <div class="message-banner">
-          <p>そして、現在SNSで拡散されている投稿には、<br>間違った和食の画像が見られる。</p>
+        <div id="current-situation" class="section section-padding">
+          <h2>日本食の現状</h2>
+          <h4>The current situation</h4>
+          <div class="underline"></div>
+          <p class="center-on-md">「日本食」が世界遺産担って世界で大ブームの日本食。健康に良いし、わびさびの美学など魅力が詰まった日本食。海外の日本食レストランは
+              2015年に約8.9万店が現在約11.8万店に追加すした。</p>
+          <img class="big-img" src="img/restaurant.jpg" alt="restaurant">
+          <p class="center-on-md">海外で和食ファンが増えているが、</p>
+          <p class="center-on-md">しかし、海外で人気のある日本食レストランにおいて、オーナーやシェフ、従業員の8割以上が『和食を食べたことがない』『日本人では無い』
+          『日本に行ったこと無い』。</p>
+
+          <div class="message-banner">
+            <div class="background"></div>
+            <p>そして、現在SNSで拡散されている投稿には、<br>間違った和食の画像が見られる。</p>
+          </div>
+
+          <!-- <img class="dragon-roll" src="img/dragonroll.jpeg" alt="dragon-roll"> -->
+          <div id="sushi-carousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-wrap="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="img/dragonroll_edit.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/california_roll_chicken_stack_tada_2.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/Teriyaki-chicken-sushi-roll.jpg" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#sushi-carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#sushi-carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <img class="vomit-icon" src="img/vormit.png" alt="">
+          </div>
+
+          <div class="sushi-police-button">
+            <button class="btn" data-toggle="modal" data-target="#exampleModal">
+              <img src="img/towa.png" alt="What is sushi police?">
+            </button>
+          </div>
+
+          <!-- Modal Windows -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <!-- <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> -->
+                <div class="modal-body">
+                  <div class="modal-main">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <!-- <span aria-hidden="true">&times;</span> -->
+                      close
+                    </button>
+                    <img src="img/modal_nox.png" alt="">
+                  </div>
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <img class="big-img" src="img/SUSHI_POLICE06_02.png" alt="Suship1">
+          <img class="big-img" src="img/SUSHI_POLICEmoniter.png" alt="Suship2">
+          <p class="sushi-police-description center-on-md">Test description</p>
         </div>
 
-        <img class="dragon-roll" src="img/dragonroll.jpeg" alt="dragon-roll">
+        <div class="section section-padding">
+          <h2>本物はこれだ！</h2>
+          <h4>This is the real Japanese food!</h4>
+          <div class="underline"></div>
+          <div>
+            <p class="center-on-md">海外の食事はどちらかというと高カロリーなものが多いので一見たら間違った日本食も多いような気もします。</p>
+            <p class="center-on-md">今回はホンダと海外でよく間違った日本食と本物の日本食を比較する。</p>
+          </div>
+          <div class="container">
+            <div class="row no-gutters">
+              <div class="col-md">
+                <div class="col-section">
+                  <h4>寿司 Sushi</h4>
+                  <div class="compare-container section-no-padding">
+                    <div class="left-img">
+                      <img src="img/Salmon-Nigiri.png" alt="sushi">
+                    </div>
+                    <div class="right-content">
+                      <img src="img/honda-icon.png" alt="honda-icon">
+                      <p>寿司に不可欠なのがシャリ！高級なネタが揃っても、それだけでお寿司は成立しない。ネタとシャリが揃ってこそ、お寿司となる。</p>
+                    </div>
+                  </div>
 
-        <div class="sushi-police-button">
-          <button class="btn" data-toggle="modal" data-target="#exampleModal">
-            <img src="img/towa.png" alt="What is sushi police?">
-          </button>
-        </div>
+                  <div class="vs-img">
+                    <img src="img/vs.png" alt="vs">
+                  </div>
 
-        <!-- Modal Windows -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+                  <div class="compare-container lower section-no-padding">
+                    <div class="left-img">
+                      <img src="img/failed_sushi.png" alt="sushi">
+                    </div>
+                    <div class="right-content">
+                      <img src="img/honda-icon-x.png" alt="honda-icon">
+                      <p>寿司はスパイシーソースやマヨネーズなどを付けたら、ネタの新鮮さがなくなった。</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="modal-body">
-                ...
+
+
+              <div class="col-md offset-md-1">
+                <div class="col-section">
+                  <h4>わさび Wasabi</h4>
+                  <div class="compare-container upper section-no-padding">
+                    <div class="left-img">
+                      <img src="img/wasabi_true.png" alt="sushi">
+                    </div>
+                    <div class="right-content">
+                      <img src="img/kawasaki_true.png" alt="kawasaki-icon">
+                      <p>わさびの使い方はネタの上につけて食べるのが正解。</p>
+                    </div>
+                  </div>
+
+                  <div class="vs-img">
+                    <img src="img/vs.png" alt="vs">
+                  </div>
+
+                  <div class="compare-container lower section-no-padding">
+                    <div class="left-img">
+                      <img src="img/wasabi_false.png" alt="sushi">
+                    </div>
+                    <div class="right-content">
+                      <img src="img/kawasaki_false.png" alt="kawasaki-icon">
+                      <p>ワサビを醤油で溶くと、ワサビ風味の強い醤油になってしまい、食べたときにネタの風味が負けてしまう。</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+
+
+
+            <div class="row no-gutters">
+              <div class="col-md">
+                <div class="col-section">
+                  <h4>そば（Soba)</h4>
+                  <div class="compare-container section-no-padding">
+                    <div class="left-img">
+                      <img src="img/soba_true.png" alt="sushi">
+                    </div>
+                    <div class="right-content">
+                      <img src="img/sara_true.png" alt="sara-true-icon">
+                      <p>そばは、美味しくて、カラダにやさしい食べ物。健康に役立つと共に、美容効果も期待できる女性にうれしい料理。</p>
+                    </div>
+                  </div>
+
+                  <div class="vs-img">
+                    <img src="img/vs.png" alt="vs">
+                  </div>
+
+                  <div class="compare-container lower section-no-padding">
+                    <div class="left-img">
+                      <img src="img/soba_false.png" alt="sushi">
+                    </div>
+                    <div class="right-content">
+                      <img src="img/sara_false.png" alt="sara-false-icon">
+                      <p>そばにポテトを入れるのはありえない！</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md offset-md-1">
+                <div class="col-section">
+                  <h4>さしみ　（Sashimi)</h4>
+                  <div class="compare-container upper section-no-padding">
+                    <div class="left-img">
+                      <img src="img/sashimi_true.png" alt="sushi">
+                    </div>
+                    <div class="right-content">
+                      <img src="img/suzuki_true.png" alt="suzuki-true-icon">
+                      <p>新鮮なお魚は健康に良い油や調味料なども、まったく使われていない。</p>
+                    </div>
+                  </div>
+
+                  <div class="vs-img">
+                    <img src="img/vs.png" alt="vs">
+                  </div>
+
+                  <div class="compare-container lower section-no-padding">
+                    <div class="left-img">
+                      <img src="img/sashimi_false.png" alt="sushi">
+                    </div>
+                    <div class="right-content">
+                      <img src="img/suzuki_false.png" alt="suzuki-false-icon">
+                      <p>海外でなまぐさを消すために沢山の調味料を使っていて、魚の新鮮さが無くなる。</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <img class="big-img" src="img/SUSHI_POLICE06_02.png" alt="Suship1">
-        <img class="big-img" src="img/SUSHI_POLICEmoniter.png" alt="Suship2">
-      </div>
 
-      <div class="section section-padding">
-        <h2>本物はこれだ！</h2>
-        <h4>This is the real Japanese food!</h4>
-        <div class="underline"></div>
-        <div>
-          <p>海外の食事はどちらかというと高カロリーなものが多いので一見たら間違った日本食も多いような気もします。</p>
-          <p>今回はホンダと海外でよく間違った日本食と本物の日本食を比較する。</p>
-        </div>
-        <div class="container">
-          <div class="row no-gutters">
-            <div class="col-md">
-              <div class="col-section">
-                <h4>寿司 Sushi</h4>
-                <div class="compare-container section-no-padding">
-                  <div class="left-img">
-                    <img src="img/Salmon-Nigiri.png" alt="sushi">
-                  </div>
-                  <div class="right-content">
-                    <img src="img/honda-icon.png" alt="honda-icon">
-                    <p>寿司に不可欠なのがシャリ！高級なネタが揃っても、それだけでお寿司は成立しない。ネタとシャリが揃ってこそ、お寿司となる。</p>
-                  </div>
-                </div>
-
-                <div class="vs-img">
-                  <img src="img/vs.png" alt="vs">
-                </div>
-
-                <div class="compare-container lower section-no-padding">
-                  <div class="left-img">
-                    <img src="img/failed_sushi.png" alt="sushi">
-                  </div>
-                  <div class="right-content">
-                    <img src="img/honda-icon-x.png" alt="honda-icon">
-                    <p>寿司はスパイシーソースやマヨネーズなどを付けたら、ネタの新鮮さがなくなった。</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-md offset-md-1">
-              <div class="col-section">
-                <h4>わさび Wasabi</h4>
-                <div class="compare-container upper section-no-padding">
-                  <div class="left-img">
-                    <img src="img/wasabi_true.png" alt="sushi">
-                  </div>
-                  <div class="right-content">
-                    <img src="img/kawasaki_true.png" alt="kawasaki-icon">
-                    <p>わさびの使い方はネタの上につけて食べるのが正解。</p>
-                  </div>
-                </div>
-
-                <div class="vs-img">
-                  <img src="img/vs.png" alt="vs">
-                </div>
-
-                <div class="compare-container lower section-no-padding">
-                  <div class="left-img">
-                    <img src="img/wasabi_false.png" alt="sushi">
-                  </div>
-                  <div class="right-content">
-                    <img src="img/kawasaki_false.png" alt="kawasaki-icon">
-                    <p>ワサビを醤油で溶くと、ワサビ風味の強い醤油になってしまい、食べたときにネタの風味が負けてしまう。</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="row no-gutters">
-            <div class="col-md">
-              <div class="col-section">
-                <h4>そば（Soba)</h4>
-                <div class="compare-container section-no-padding">
-                  <div class="left-img">
-                    <img src="img/soba_true.png" alt="sushi">
-                  </div>
-                  <div class="right-content">
-                    <img src="img/sara_true.png" alt="sara-true-icon">
-                    <p>そばは、美味しくて、カラダにやさしい食べ物。健康に役立つと共に、美容効果も期待できる女性にうれしい料理。</p>
-                  </div>
-                </div>
-
-                <div class="vs-img">
-                  <img src="img/vs.png" alt="vs">
-                </div>
-
-                <div class="compare-container lower section-no-padding">
-                  <div class="left-img">
-                    <img src="img/soba_false.png" alt="sushi">
-                  </div>
-                  <div class="right-content">
-                    <img src="img/sara_false.png" alt="sara-false-icon">
-                    <p>そばにポテトを入れるのはありえない！</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-md offset-md-1">
-              <div class="col-section">
-                <h4>さしみ　（Sashimi)</h4>
-                <div class="compare-container upper section-no-padding">
-                  <div class="left-img">
-                    <img src="img/sashimi_true.png" alt="sushi">
-                  </div>
-                  <div class="right-content">
-                    <img src="img/suzuki_true.png" alt="suzuki-true-icon">
-                    <p>新鮮なお魚は健康に良い油や調味料なども、まったく使われていない。</p>
-                  </div>
-                </div>
-
-                <div class="vs-img">
-                  <img src="img/vs.png" alt="vs">
-                </div>
-
-                <div class="compare-container lower section-no-padding">
-                  <div class="left-img">
-                    <img src="img/sashimi_false.png" alt="sushi">
-                  </div>
-                  <div class="right-content">
-                    <img src="img/suzuki_false.png" alt="suzuki-false-icon">
-                    <p>海外でなまぐさを消すために沢山の調味料を使っていて、魚の新鮮さが無くなる。</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="section">
+        <div class="section video-section section-padding">
           <h2>作法はこれだ！</h2>
           <h4>This is how to eat Japanese food.</h4>
           <div class="underline"></div>
-          <div>
-            <p>「箸使いを見れば、育ちがわかる」とまで言われる、テーブルマナー。</p>
-            <p>無形文化遺産にも登録された日本食には食べ方の作法があるので、知らないと恥をかいてしまう場面もあります。正しいマナーを覚えて、自信を
-               持って食事ができるようになりましょう!</p>
-          </div>
+          <div class="container">
+            <div class="row justify-content-md-center align-items-center">
 
-          <div class="arrow_down">
-            <img src="img/arrow_down.png" alt="arrow">
-          </div>
 
-          <!-- Movie -->
-           <iframe class="video-frame" src="https://www.youtube.com/embed/epfPe2U_2Xk?autoplay=1&;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+              <div class="side-img col-md-2 d-none d-md-block d-lg-block d-xl-block">
+                <img src="img/kawasaki_c67.png" alt="img-left">
+              </div>
+
+              <div class="col-12 col-md-8">
+                <div>
+                  <p>「箸使いを見れば、育ちがわかる」とまで言われる、テーブルマナー。</p>
+                  <p>無形文化遺産にも登録された日本食には食べ方の作法があるので、知らないと恥をかいてしまう場面もあります。正しいマナーを覚えて、自信を
+                     持って食事ができるようになりましょう!</p>
+                </div>
+
+                <div class="arrow_down">
+                  <img src="img/arrow_down.png" alt="arrow">
+                </div>
+
+                <!-- Movie -->
+                 <iframe class="video-frame" src="https://www.youtube.com/embed/epfPe2U_2Xk?autoplay=0&;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+              </div>
+
+              <div class="side-img col-md-2 d-none d-md-block d-lg-block d-xl-block">
+                <img src="img/honda_c72_maguro.png" alt="img-right">
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="section-padding">
           <div class="message-banner">
-          <!--  -->
+            <div class="background"></div>
             <p>映画を見終わった後の感覚はどうですか？<br>よくわかってきたか？</p>
           </div>
+        </div>
 
-          <div class="vocab-section section">
+        <div class="vocab-section section section-padding">
             <div class="headline">
-              <h3><img src="img/arrow_hori.png" alt="horizontal"> 日本食についての単語を学ぼう！</h3>
+              <h2><img src="img/arrow_hori.png" alt="horizontal"> 日本食についての単語を学ぼう！</h2>
             </div>
 
             <div class="utensil container">
@@ -231,75 +327,66 @@
                 <div class="col-6 col-md-4">
                   <div class="utensil-wrapper">
                     <div>
-                      <img src="img/plate.png" alt="test">
+                      <img src="img/hashi.png" alt="hashi">
                     </div>
-                    <h5>Test</h5>
-                    <p>Tej; lekjr;wlek jrw;el kj sdklj ;sdlkj as;lk djas; ldkj;</p>
+                    <h4>箸(はし)</h4>
+                    <p>食事をする（または物をはさむ）ために用いる細長い二本の棒。</p>
                   </div>
                 </div>
 
                 <div class="col-6 col-md-4">
                   <div class="utensil-wrapper">
                     <div>
-                      <img src="img/plate.png" alt="test">
+                      <img src="img/cup.png" alt="test">
                     </div>
-                    <h5>Test</h5>
-                    <p>Tej; lekjr;wlek jrw;el kj sdklj ;sdlkj as;lk djas; ldkj;</p>
+                    <h4>蕎麦猪口 (そばちょこ）</h4>
+                    <p>一般的に酒を飲むための小型の器、または、そばをそばつゆ（汁）につけるための容器</p>
                   </div>
                 </div>
-                
+
                 <div class="col-6 col-md-4">
                   <div class="utensil-wrapper">
                     <div>
-                      <img src="img/plate.png" alt="test">
+                      <img src="img/holdhashi.png" alt="test">
                     </div>
-                    <h5>Test</h5>
-                    <p>Tej; lekjr;wlek jrw;el kj sdklj ;sdlkj as;lk djas; ldkj;</p>
-                  </div>
-                </div>
-                <div class="col-6 col-md-4">
-                  <div class="utensil-wrapper">
-                    <div>
-                      <img src="img/plate.png" alt="test">
-                    </div>
-                    <h5>Test</h5>
-                    <p>Tej; lekjr;wlek jrw;el kj sdklj ;sdlkj as;lk djas; ldkj;</p>
+                    <h4>箸置き (はしおき）</h4>
+                    <p>食卓で箸の先をのせておく小さな道具</p>
                   </div>
                 </div>
                 <div class="col-6 col-md-4">
                   <div class="utensil-wrapper">
                     <div>
-                      <img src="img/plate.png" alt="test">
+                      <img src="img/oshibori.png" alt="test">
                     </div>
-                    <h5>Test</h5>
-                    <p>Tej; lekjr;wlek jrw;el kj sdklj ;sdlkj as;lk djas; ldkj;</p>
+                    <h4>おしぼり</h4>
+                    <p>客が手や顔をふくために出す湯や水でしめして絞った手ぬぐい</p>
                   </div>
                 </div>
                 <div class="col-6 col-md-4">
                   <div class="utensil-wrapper">
                     <div>
-                      <img src="img/plate.png" alt="test">
+                      <img src="img/benishoka.png" alt="benishoka">
                     </div>
-                    <h5>Test</h5>
-                    <p>Tej; lekjr;wlek jrw;el kj sdklj ;sdlkj as;lk djas; ldkj;</p>
+                    <h4>紅生姜 (べにしょうが）</h4>
+                    <p>梅酢につけて赤くしたしょうが。</p>
                   </div>
                 </div>
                 <div class="col-6 col-md-4">
                   <div class="utensil-wrapper">
                     <div>
-                      <img src="img/plate.png" alt="test">
+                      <img src="img/sara.png" alt="sara">
                     </div>
-                    <h5>Test</h5>
-                    <p>Tej; lekjr;wlek jrw;el kj sdklj ;sdlkj as;lk djas; ldkj;</p>
+                    <h4>皿 （さら）</h4>
+                    <p>食物を盛る平たく浅い器。</p>
                   </div>
                 </div>
                 <div class="col-6 col-md-4">
                   <div class="utensil-wrapper">
                     <div>
-                      <img src="img/plate.png" alt="test">
+                      <img src="img/spoon.png" alt="spoon">
                     </div>
-                    <h5>Test</h5>
-                    <p>Tej; lekjr;wlek jrw;el kj sdklj ;sdlkj as;lk djas; ldkj;</p>
+                    <h4>匙 (さじ）</h4>
+                    <p>液体や粉末をすくい取る道具。（スプーンと同じ意味）</p>
                   </div>
                 </div>
                 <div class="col-6 col-md-4">
@@ -307,35 +394,44 @@
                     <div>
                       <img src="img/plate.png" alt="test">
                     </div>
-                    <h5>Test</h5>
-                    <p>Tej; lekjr;wlek jrw;el kj sdklj ;sdlkj as;lk djas; ldkj;</p>
+                    <h4>椀（わん）</h4>
+                    <p>飯や汁物などを盛るための食器。</p>
                   </div>
                 </div>
                 <div class="col-6 col-md-4">
                   <div class="utensil-wrapper">
                     <div>
-                      <img src="img/plate.png" alt="test">
+                      <img src="img/shoyu.png" alt="shoyu">
                     </div>
-                    <h5>Test</h5>
-                    <p>Tej; lekjr;wlek jrw;el kj sdklj ;sdlkj as;lk djas; ldkj;</p>
+                    <h5>醤油（しょうゆ）</h5>
+                    <p>大豆と小麦で作った麹（こうじ）と塩水を発酵・熟成させて作る、黒茶色の調味料</p>
                   </div>
                 </div>
                 <div class="col-6 col-md-4">
                   <div class="utensil-wrapper">
                     <div>
-                      <img src="img/plate.png" alt="test">
+                      <img src="img/miso.png" alt="miso">
                     </div>
-                    <h5>Test</h5>
-                    <p>Tej; lekjr;wlek jrw;el kj sdklj ;sdlkj as;lk djas; ldkj;</p>
+                    <h4>味噌汁 (みそしる）</h4>
+                    <p>みそをだしにとかし、刻んだ野菜やとうふなどを入れて煮た汁。</p>
                   </div>
                 </div>
                 <div class="col-6 col-md-4">
                   <div class="utensil-wrapper">
                     <div>
-                      <img src="img/plate.png" alt="test">
+                      <img src="img/neta.png" alt="neta">
                     </div>
-                    <h5>Test</h5>
-                    <p>Tej; lekjr;wlek jrw;el kj sdklj ;sdlkj as;lk djas; ldkj;</p>
+                    <h4>すしネタ</h4>
+                    <p>寿司にして酢飯とともに食べる具。寿司種を言い換えた表現</p>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="utensil-wrapper">
+                    <div>
+                      <img src="img/shari.png" alt="shari">
+                    </div>
+                    <h4>シャリ (寿司)</h4>
+                    <p>色や形が火葬した後に残る粒状の骨と似ていることから呼ばれるようになったが、Sanskrit語で「米」を意味する</p>
                   </div>
                 </div>
               </div>
@@ -343,9 +439,156 @@
           </div>
 
 
+        <div class="section section-padding">
+            <h2>正す日本食を世界に<br>広げよう</h2>
+            <h4>Let's tell the world</h4>
+            <div class="underline"></div>
+            <div class="dialog-container container">
+              <!-- <div class="background-img">
+                <img src="img/bg_sec4.jpg" alt="">
+              </div> -->
+              <div class="row-wrapper">
+                <div class="row">
+                  <div class="col-12 col-md-6 dialog-box dialog-1">
+                    <img class="dialog" src="img/sara_talk.png" alt="">
+                    <img class="character" src="img/sara_report.png" alt="">
+                  </div>
+                  <div class="col-12 col-md-6 dialog-box dialog-2">
+                    <img class="dialog" src="img/cat_talk.png" alt="">
+                    <img class="character" src="img/cat.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="social">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=www.google.com"><img border="0" alt="facebook" src="img/facebook.png"></a>
+            <a href="#"><img border="0" alt="instagram" src="img/insta.png"></a>
+            <a href="https://twitter.com/home?status=https%3A//www.facebook.com/sharer/sharer.pwww.google.com"><img border="0" alt="twitter" src="img/twitter.png"></a>
+            <a href="https://pinterest.com/pin/create/button/?url=www.google.com&media=http%3A//via.placeholder.com/350x150&description=Sample%20description"><img border="0" alt="pinterest" src="img/pin.png"></a>
+          </div>
+
+
+        <!-- minna no nihonshoku section -->
+        <div class="vocab-section section">
+          <div class="headline">
+            <h2><img src="img/arrow_hori.png" alt="horizontal"> みんなの日本食</h2>
+          </div>
+        </div>
 
 
 
-    </div>
+        <div class="instagram-section section section-padding">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="col-padding">
+
+                  <div class="instagram-container">
+                    <div class="left-img">
+                      <img src="img/ig_face.png" alt="face">
+                    </div>
+                    <div class="right-content">
+                      <a href="https://www.instagram.com/p/BaT2T58DXBJSe1jTB5PtpPITvz-w75YGsImoWI0/?taken-by=vrvauuu">vrvauuu</a>
+                      <img src="img/vrv.png" alt="">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="col-padding">
+
+                  <div class="instagram-container">
+                    <div class="left-img">
+                      <img src="img/aun_face.png" alt="face">
+                    </div>
+                    <div class="right-content">
+                      <a href="https://www.instagram.com/p/BaVm-PFggNRPf8-mY0m2_wn1LCb2xmeauaTMCw0/?taken-by=aunnnnwr">aunnnnwr</a>
+                      <img src="img/aun.png" alt="">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="col-padding">
+
+                  <div class="instagram-container">
+                    <div class="left-img">
+                      <img src="img/takahashi.png" alt="face">
+                    </div>
+                    <div class="right-content">
+                      <a href="https://www.instagram.com/p/BaT2T58DXBJSe1jTB5PtpPITvz-w75YGsImoWI0/?taken-by=vrvauuu">vrvauuu</a>
+                      <img src="img/waka.png" alt="tsukemen">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="col-padding">
+
+                  <div class="instagram-container">
+                    <div class="left-img">
+                      <img src="img/ig_face.png" alt="face">
+                    </div>
+                    <div class="right-content">
+                      <a href="#">test</a>
+                      <img src="img/aun.png" alt="">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="col-padding">
+
+                  <div class="instagram-container">
+                    <div class="left-img">
+                      <img src="img/ig_face.png" alt="face">
+                    </div>
+                    <div class="right-content">
+                      <a href="#">test</a>
+                      <img src="img/aun.png" alt="">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="col-padding">
+
+                  <div class="instagram-container">
+                    <div class="left-img">
+                      <img src="img/ig_face.png" alt="face">
+                    </div>
+                    <div class="right-content">
+                      <img src="img/aun.png" alt="">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mainsite">
+          <a href="http://sushi-police.com/"><img border="0" alt="sushi-site" src="img/sushi-site.png"></a>
+        </div>
+
+      </div>
+    <div>
+
+  <footer>“SUSHI POLICE” Project Partners</footer>
   </body>
 </html>

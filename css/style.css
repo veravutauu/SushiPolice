@@ -21,15 +21,61 @@ p{
   line-height: 150%;
 }
 
+#scroll-top-button {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  width: 50px;
+  height: 50px;
+  z-index: 2000;
+  cursor: pointer;
+  opacity: 0.0;
+}
+
+#scroll-top-button img {
+  width: 100%;
+}
+
 .container {
   padding: 0 !important;
   /*margin: 0 !important;*/
 }
 
-body {
-  margin: 0 !important;
+#sushi-carousel {
+  display: block;
+  width: 80%;
+  margin: 0 auto 80px auto;
 }
 
+.vomit-icon {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 30%;
+  max-width: 120px;
+  transform: translate(-50%, 50%);
+}
+
+body {
+  margin: 0 !important;
+  background: #f8f4e6;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-main .close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 1.5em;
+  color: white;
+}
+
+.modal-main img {
+  width: 100%;
+}
 .underline{
   border-bottom: 3px solid #fbc700;
   width: 150px;
@@ -37,9 +83,12 @@ body {
 }
 
 .content {
-  background-color: white;
-  /*margin-right: 30px;*/
   position: relative;
+  padding-top: 20px;
+}
+
+.video-section .side-img img {
+  width: 100%;
 }
 
 .video-frame {
@@ -51,6 +100,10 @@ body {
   padding: 10px 0 40px 0;
 }
 
+.max-width-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 .right-pane {
   content: "";
   background-color: #fbc700;
@@ -60,12 +113,12 @@ body {
   height: 100%;
   display: inline-block;
   position: absolute;
-  z-index: 1100;
+  z-index: 900;
 }
 
 .big-img {
   display: block;
-  margin: 0 15px 0 0;
+  margin: 0 auto;
   max-width: 90%;
   padding: 10px 0 10px 0;
 }
@@ -84,21 +137,42 @@ body {
   margin-right: -40px;
 }
 
-.section-padding .message-banner {
-  background-color: #fbc700;
+.message-banner {
   margin: 0px -20px 8px 12px;
   color: white;
+  background: red;
   padding: 12px;
+  position: relative;
+}
+
+.message-banner .background {
+  background-color: #fbc700;
+  width: 100%;
+  height: 100%;
+
+  margin-right: -1000px;
+  /*display: block;*/
+  position: absolute;
+  z-index: 0;
+  left: 0px;
+  top: 0px;
 }
 
 .message-banner p {
+  z-index: 1000;
   margin: 0;
+  position: relative;
+  /*display: block;*/
 }
 
 .dragon-roll {
-  width: 200px;
+  width: 50%;
   display: block;
   margin: 8px auto;
+}
+
+.sushi-police-description {
+  display: none;
 }
 
 .sushi-police-button {
@@ -187,32 +261,150 @@ body {
 }
 
 .arrow_down {
-  text-align: center;
-  padding: 30px;
+  margin: 30px 0;
 }
 .arrow_down img {
   width: 80px;
+  display: block;
+  margin: auto;
 }
 .headline img{
   max-height: 40px;
   width: 20px;
 }
-.headline h3{
-
+.headline h2{
+ margin-left: 15px;
 }
 
 .utensil-wrapper img {
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 60px;
 }
 
 .utensil {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
+}
+
+.dialog-box {
+  width: 100%;
+  max-width: 480px;
+  margin: 20px auto;
+}
+
+.dialog-container {
+  background-image: url("https://image.ibb.co/fusxKw/bg_sec4.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+.dialog-container .row-wrapper {
+  padding: 10px;
+}
+
+.dialog-box .character {
+  width: 40%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 0 auto;
+  clear: both;
+}
+
+.dialog-box .dialog {
+  width: 85%;
+  max-width: 400px;
+  display: block;
+}
+
+.dialog-box.dialog-2 .dialog {
+  float: right;
+}
+
+.instagram-section {
+  padding: 0 20p;
+}
+
+.instagram-container {
+  overflow: hidden;
+  background: #e6e6e6;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  padding: 20px 40px 20px 20px;
+  max-width: 400px;
+  margin: auto;
+
+  box-shadow: 5px 5px;
+}
+
+.instagram-section .col-padding {
+  padding: 10px;
+}
+
+.instagram-container .left-img {
+  float: left;
+  width: 50px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.instagram-container .left-img img {
+  width: 100%;
+  height: auto;
+}
+
+.instagram-container .right-content {
+  overflow: hidden;
+}
+
+.instagram-container .right-content img {
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.instagram-container .right-content a {
+  display: block;
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+
+.center-on-md {
+  text-align: left;
+}
+.social{
+  text-align: center;
+  margin: 10px 0 50px 0;
+}
+.social img{
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+}
+
+.mainsite{
+  margin: 120px 0 0 0;
+  text-align: center;
+}
+.mainsite img{
+  width: 300px;
+}
+footer{
+  text-align: center;
+  background-color: #fbc700;
+  padding: 10px;
+  margin: 60px 0 0 0;
 }
 @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
-@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
-@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */
+  .compare-container {
+    min-height: 260px;
+  }
+}
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+
+}
+
 @media (min-width:801px)  {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
   .section-no-padding {
@@ -222,6 +414,22 @@ body {
   .vocab-section {
     padding: 20px 40px 40px 40px;
   }
+  .center-on-md {
+    text-align: center;
+  }
+
+  .message-banner p {
+    text-align: center;
+  }
+
+  .sushi-police-button {
+    display: none;
+  }
+
+  .sushi-police-description {
+    display: block;
+  }
+
 }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
 @media (min-width:1281px) { /* hi-res laptops and desktops */ }
