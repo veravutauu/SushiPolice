@@ -37,7 +37,6 @@
 
 @media (min-width:520px)  {
   #intro-text {
-    left: 45%;
     height: 66vh;
   }
 
@@ -50,7 +49,7 @@
     transform: none;
     width: 30vw;
     height: auto;
-    max-width: 300px;
+    max-width: 260px;
   }
 }
 

@@ -5,6 +5,8 @@ var allClasses = [
   '.dialog-2 .character',
 ];
 
+var didShowDialogAnimation = false;
+
 var ANIMATED_DURATION = 700;
 var delays = [
   ANIMATED_DURATION,
@@ -25,16 +27,17 @@ $(window).scroll(function () {
 
   var triggerHeight = (topDivHeight - viewPortSize);
 
-  if (windowScrollTop >= triggerHeight) {
+  if (!didShowDialogAnimation && windowScrollTop >= triggerHeight) {
+
+    didShowDialogAnimation = true
 
     allClasses.forEach(function(item, i) {
       $(item).css('opacity','0').delay(delays[i]).animate({ 'opacity': '1' })
     })
-    $(this).off('scroll');
   }
 
   // Hide scroll-top-button if firstSection is shown
-  if (windowScrollTop >= (firstSection - viewPortSize)) {
+  if (windowScrollTop > 20) {
     $('#scroll-top-button').css({ opacity: "1.0 "});
   } else {
     $('#scroll-top-button').css({ opacity: "0.0 "});
@@ -48,8 +51,6 @@ $(function() {
 
   $('#scroll-down-section-1 a').on('click', function(e) {
     e.preventDefault();
-    console.log('click!');
-    console.log($(this).attr('href'));
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
   });
 
@@ -88,6 +89,7 @@ $(function() {
   var $wordList = $intro_text.text().split("");
   //clear the welcome text msg
   $intro_text.text("");
+  $('#intro-text').empty();
   //loop through the letters in the $wordList array
   $.each($wordList, function(idx, elem) {
     //create a span for the letter and set opacity to 0
