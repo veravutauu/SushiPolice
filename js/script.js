@@ -59,18 +59,48 @@ $(function() {
 
 
   // Animate Intro
-  $(".clip-1 img").animate({
+  $(".clip-1 .clip-image-wrapper").animate({
     left: "+=32px",
     opacity: "1.0",
   }, CHARACTER_ANIMATION_DURATION);
 
-  $(".clip-2 img").delay(CHARACTER_ANIMATION_DURATION).animate({
-    right: "-=32px",
+  $(".clip-2 .clip-image-wrapper").delay(CHARACTER_ANIMATION_DURATION).animate({
+    left: "+=32px",
     opacity: "1.0",
   }, CHARACTER_ANIMATION_DURATION);;
 
-  $(".clip-3 img").delay(CHARACTER_ANIMATION_DURATION*2).animate({
-    // bottom: "+=32px",
+  $(".clip-3 .clip-image-wrapper").delay(CHARACTER_ANIMATION_DURATION*2).animate({
+    bottom: "+=32px",
     opacity: "1.0",
   }, CHARACTER_ANIMATION_DURATION);
+
+  $("#logo").delay(CHARACTER_ANIMATION_DURATION*3).animate({
+    opacity: "1.0",
+  }, CHARACTER_ANIMATION_DURATION);
+
+
+  
+  // Fade in Letter-by-letter
+
+  var $intro_text = $('#intro-text h1');
+
+  //get a list of letters from the welcome text
+  var $wordList = $intro_text.text().split("");
+  //clear the welcome text msg
+  $intro_text.text("");
+  //loop through the letters in the $wordList array
+  $.each($wordList, function(idx, elem) {
+    //create a span for the letter and set opacity to 0
+    var newEL = $("<span/>").text(elem).css({
+      opacity: 0
+    });
+    //append it to the welcome message
+    newEL.appendTo($intro_text);
+    //set the delay on the animation for this element
+    newEL.delay(idx * 100);
+    //animate the opacity back to full 1
+    newEL.animate({
+      opacity: 1
+    }, 1000);
+  });
 });
