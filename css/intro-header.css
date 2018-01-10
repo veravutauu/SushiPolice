@@ -27,6 +27,10 @@
   color: white;
 }
 
+#intro-text h1 {
+  opacity: 0;
+}
+
 #intro-text * {
   font-size: 7.5vh;
 }

@@ -95,7 +95,7 @@ $(function() {
       opacity: 0
     });
     //append it to the welcome message
-    newEL.appendTo($intro_text);
+    newEL.appendTo($('#intro-text'));
     //set the delay on the animation for this element
     newEL.delay(idx * 100);
     //animate the opacity back to full 1
