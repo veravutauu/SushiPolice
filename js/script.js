@@ -88,6 +88,7 @@ $(function() {
   var $wordList = $intro_text.text().split("");
   //clear the welcome text msg
   $intro_text.text("");
+  $('#intro-text').empty();
   //loop through the letters in the $wordList array
   $.each($wordList, function(idx, elem) {
     //create a span for the letter and set opacity to 0
