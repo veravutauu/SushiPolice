@@ -15,6 +15,8 @@ var delays = [
   ANIMATED_DURATION*2,
 ]
 
+var shouldNavbarTransparent = true;
+
 $(window).scroll(function () {
 
   var firstSection = $("#current-situation").offset().top;
@@ -36,7 +38,14 @@ $(window).scroll(function () {
     })
   }
 
-  // Hide scroll-top-button if firstSection is shown
+  if (windowScrollTop > (firstSection - viewPortSize)) {
+    shouldNavbarTransparent = false
+    $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });
+  } else {
+    shouldNavbarTransparent = true
+    $('#my-navbar').css({ 'background-color': 'transparent' });
+  }
+  // Hide scroll-top-button if firstSection is shown  
   if (windowScrollTop > 20) {
     $('#scroll-top-button').css({ opacity: "1.0 "});
   } else {
@@ -49,15 +58,30 @@ var CHARACTER_ANIMATION_DURATION = 500;
 // On web load
 $(function() {
 
+  $('#navbarNavAltMarkup').on('show.bs.collapse', function() {
+    $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });
+  });
+
+  $('#navbarNavAltMarkup').on('hidden.bs.collapse', function() {
+    if (shouldNavbarTransparent) {
+      $('#my-navbar').css({ 'background-color': 'transparent' });
+    }
+  })
+
   $('#scroll-down-section-1 a').on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
   });
 
-  $("#scroll-top-button").on('click', function() {
+  $("#scroll-top-button").on('click', function(e) {
+    e.preventDefault();
     $('html,body').animate({ scrollTop: 0 }, 'slow');
   });
 
+  $("#my-navbar .navbar-nav a").on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 40}, 44, 'linear');
+  });
 
   // Animate Intro
   $(".clip-1 .clip-image-wrapper").animate({
