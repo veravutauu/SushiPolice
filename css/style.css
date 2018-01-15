@@ -2,6 +2,7 @@
 * {
   font-family: "Hiragino Sans";
   font-size: 14px;
+  line-height: 2.2;
 }
 
 h2 {
@@ -15,6 +16,14 @@ h4 {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
+}
+.utensil-wrapper h4{
+  font-size: 14px;
+  font-weight: 700;
+  margin: 15px 0 10px 0;
+}
+.utensil-wrapper p{
+  margin: 0 0 20px 0;
 }
 p{
   letter-spacing: 1px;
@@ -44,7 +53,7 @@ p{
 #sushi-carousel {
   display: block;
   width: 80%;
-  margin: 20px auto 80px auto;
+  margin: 30px auto 80px auto;
 }
 
 .vomit-icon {
@@ -52,7 +61,7 @@ p{
   left: 50%;
   bottom: 0;
   width: 30%;
-  max-width: 120px;
+  max-width: 160px;
   transform: translate(-50%, 50%);
 }
 
@@ -82,7 +91,7 @@ body {
   margin-bottom: 30px;
 }
 .underline_1{
-  border-bottom: 1px solid #fbc700;
+  border-bottom: 2px solid #fbc700;
   width: 80px;
   margin-bottom: 10px;
 }
@@ -154,6 +163,7 @@ body {
   /*margin-top: 50px;*/
   padding-right: 40px;
   padding-left: 15px;
+  margin: 30px 0 0 0;
 }
 .heading_margin{
   margin: 80px 0 20px 0;
@@ -189,6 +199,7 @@ body {
   z-index: 1000;
   margin: 0;
   position: relative;
+  font-weight: 600;
   /*display: block;*/
 }
 
@@ -409,8 +420,21 @@ body {
 
 .center-on-md {
   text-align: left;
-  margin-top: 10px;
+  margin: 25px 0 20px 0;;
 }
+.center-on-md span{
+  font-weight: 700;
+}
+
+.bold_text{
+  text-align: center;
+  margin: 10px 0 10px 0;
+  font-weight: 700;
+}
+.col-12 span{
+  font-weight: 700;
+}
+
 /*.bold_text{
   font-weight: bold;
   text-align: center;
@@ -434,6 +458,7 @@ body {
 }
 footer{
   text-align: center;
+  font-weight: 700;
   background-color: #fbc700;
   padding: 10px;
   margin: 60px 0 0 0;
@@ -473,6 +498,10 @@ footer{
     display: block;
   }
 
+  .col-12 span{
+    text-align: center;
+  }
+
   #img-deco-message-banner .background {
     background-color: transparent;
     display: none;
@@ -485,3 +514,6 @@ footer{
 }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
 @media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+/**/
+-webkit-filter:drop-shadow(0 5px 10px #000000);

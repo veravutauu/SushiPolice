@@ -1,12 +1,14 @@
 #my-navbar {
   z-index: 6000;
   width: 100%;
+  /*background-color: #fdc700;*/
   /* position: relative; */
 }
 
 #my-navbar .navbar-nav li {
   margin: auto 0;
   display: block;
+  padding: 0 20px 0 15px;
 }
 
 #my-navbar .navbar-nav a {
@@ -58,6 +60,7 @@
   transform: translate(-50%,-50%);
   z-index: 4000;
   color: white;
+  -webkit-filter:drop-shadow(0 5px 10px #000000);
 }
 
 #intro-text h1 {
@@ -68,7 +71,7 @@
   font-size: 7.5vh;
 }
 
-@media (min-width:520px)  {
+@media (min-width:600px)  {
   #intro-text {
     height: 66vh;
   }
@@ -86,7 +89,7 @@
   }
 }
 
-/* 
+/*
 @media screen and (min-width: 1000px) {
   #intro-text h1 {
      font-size: 80px;
