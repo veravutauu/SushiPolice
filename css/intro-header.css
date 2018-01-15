@@ -13,6 +13,7 @@
 #my-navbar .navbar-nav li {
   margin: auto 0;
   display: block;
+  padding: 0 20px 0 15px;
 }
 
 #my-navbar .navbar-nav a {
@@ -22,20 +23,6 @@
   /* height: 44px;
   line-height: 44px; */
 }
-
-.navbar-inverse {
-  /* border-width: 0px;
-  -webkit-box-shadow: 0px 0px;
-  box-shadow: 0px 0px;
-  background-color: rgba(0,0,0,0.0);
-  background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
-  background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
-  background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%); */
-}
-
-/* #my-navbar .navbar-toggler-icon {
-  color: white;
-} */
 
 #logo {
   position: absolute;
@@ -64,6 +51,7 @@
   transform: translate(-50%,-50%);
   z-index: 4000;
   color: white;
+  -webkit-filter:drop-shadow(0 5px 10px #000000);
 }
 
 #intro-text h1 {
@@ -74,7 +62,7 @@
   font-size: 7.5vh;
 }
 
-@media (min-width:520px)  {
+@media (min-width:600px)  {
   #intro-text {
     height: 66vh;
   }
@@ -92,7 +80,7 @@
   }
 }
 
-/* 
+/*
 @media screen and (min-width: 1000px) {
   #intro-text h1 {
      font-size: 80px;
