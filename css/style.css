@@ -516,4 +516,4 @@ footer{
 @media (min-width:1281px) { /* hi-res laptops and desktops */ }
 
 /**/
--webkit-filter:drop-shadow(0 5px 10px #000000);
+/* -webkit-filter:drop-shadow(0 5px 10px #000000); */
