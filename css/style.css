@@ -1,7 +1,9 @@
 
 * {
   font-family: "Hiragino Sans";
-  font-size: 14px;
+  /*font-size: 14px;*/
+  font-size: 13px;
+  font-weight: 500;
   line-height: 2.2;
 }
 
@@ -21,13 +23,14 @@ h4 {
   font-size: 14px;
   font-weight: 700;
   margin: 15px 0 10px 0;
+  line-height: 1.5;
 }
 .utensil-wrapper p{
   margin: 0 0 20px 0;
 }
 p{
   letter-spacing: 1px;
-  line-height: 150%;
+  line-height: 170%;
 }
 
 #scroll-top-button {
@@ -104,7 +107,16 @@ body {
 .side-img img {
   width: 100%;
 }
-
+.vertical-horizontal{
+  text-align: center;
+  margin: 15px 0 10px 0;
+}
+.vertical-horizontal-sub{
+  text-align: center;
+  font-weight: 700;
+  margin: 25px auto;
+  font-size: 18px;
+}
 .video-frame {
   display: block;
   margin: auto;
@@ -121,7 +133,7 @@ body {
 .right-pane {
   content: "";
   background-color: #fbc700;
-  width: 30px;
+  width: 25px;
   top: 0;
   right: 0;
   height: 100%;
@@ -133,7 +145,7 @@ body {
 .big-img {
   display: block;
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 100%;
   padding: 10px 0 10px 0;
 }
 .maru {
@@ -193,6 +205,7 @@ body {
   z-index: 0;
   left: 0px;
   top: 0px;
+  -webkit-filter:drop-shadow(0 3px 1px #000000);
 }
 
 .message-banner p {
@@ -211,6 +224,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
+  -webkit-filter:drop-shadow(0 3px 1px #000000);
 }
 
 .dragon-roll {
@@ -388,7 +402,7 @@ body {
 }
 
 .instagram-section .col-padding {
-  padding: 10px;
+  padding: 15px;
 }
 
 .instagram-container .left-img {
@@ -441,7 +455,7 @@ body {
 }*/
 .social{
   text-align: center;
-  margin: 10px 0 50px 0;
+  margin: 20px 0 50px 0;
 }
 .social img{
   width: 60px;
@@ -454,7 +468,7 @@ body {
   text-align: center;
 }
 .mainsite img{
-  width: 300px;
+  width: 280px;
 }
 footer{
   text-align: center;
@@ -466,8 +480,8 @@ footer{
 
 .towa-symbol {
   display: none;
-  margin: 102px auto 22px auto;
-  width: 200px;
+  margin: 126px auto 40px auto;
+  width: 300px;
 }
 
 @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
@@ -482,15 +496,22 @@ footer{
 
 @media (min-width:768px)  {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .vertical-horizontal-sub{
+    font-style: 20px;
+    font-weight: 700;
+    writing-mode:vertical-rl;
+    line-height: 2.5;
+  }
   .towa-symbol {
     display: block;
+    width: 60%;
   }
   .section-no-padding {
     margin-left: 0;
     margin-right: 0;
   }
   .vocab-section {
-    padding: 20px 40px 20px 40px;
+    padding: 20px 40px 0px 40px;
   }
   .center-on-md {
     text-align: center;
@@ -509,6 +530,12 @@ footer{
   }
 
   .col-12 span{
+    text-align: center;
+  }
+  .mainsite img{
+    width: 400px;
+  }
+  .centering_text{
     text-align: center;
   }
 
