@@ -108,6 +108,8 @@ $(function() {
   // Fade in Letter-by-letter
 
   var DELAY_BEFORE_SHOWING = 1000;
+  var ANIMATE_TIME_OF_EACH_CHARACTER = 1000;
+  var DELAY_BETWEEN_EACH_CHARACTER = 100;
 
   var $intro_text = $('#intro-text h1');
 
@@ -125,10 +127,10 @@ $(function() {
     //append it to the welcome message
     newEL.appendTo($('#intro-text'));
     //set the delay on the animation for this element
-    newEL.delay(DELAY_BEFORE_SHOWING + idx * 100);
+    newEL.delay(DELAY_BEFORE_SHOWING + idx * DELAY_BETWEEN_EACH_CHARACTER);
     //animate the opacity back to full 1
     newEL.animate({
       opacity: 1
-    }, 1000);
+    }, ANIMATE_TIME_OF_EACH_CHARACTER);
   });
 });
