@@ -80,7 +80,7 @@ $(function() {
 
   $("#my-navbar .navbar-nav a").on('click', function(e) {
     e.preventDefault();
-    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 40}, 44, 'linear');
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 40}, 600, 'linear');
   });
 
   // Animate Intro
