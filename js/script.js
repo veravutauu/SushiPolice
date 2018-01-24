@@ -45,7 +45,7 @@ $(window).scroll(function () {
     shouldNavbarTransparent = true
     $('#my-navbar').css({ 'background-color': 'transparent' });
   }
-  // Hide scroll-top-button if firstSection is shown  
+  // Hide scroll-top-button if firstSection is shown
   if (windowScrollTop > 20) {
     $('#scroll-top-button').css({ opacity: "1.0 "});
   } else {
@@ -80,7 +80,7 @@ $(function() {
 
   $("#my-navbar .navbar-nav a").on('click', function(e) {
     e.preventDefault();
-    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 40}, 600, 'linear');
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 90}, 600, 'linear');
   });
 
   // Animate Intro
@@ -104,10 +104,10 @@ $(function() {
   }, CHARACTER_ANIMATION_DURATION);
 
 
-  
+
   // Fade in Letter-by-letter
 
-  var DELAY_BEFORE_SHOWING = 1000;
+  var DELAY_BEFORE_SHOWING = 50;
   var ANIMATE_TIME_OF_EACH_CHARACTER = 1000;
   var DELAY_BETWEEN_EACH_CHARACTER = 100;
 
