@@ -516,6 +516,11 @@ footer{
 @media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 
 }
+@media (min-width:600px) {
+  .towa-symbol{
+    margin: 180px auto 50px auto;
+  }
+}
 
 @media (min-width:768px)  {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
