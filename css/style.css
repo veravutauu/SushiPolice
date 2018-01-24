@@ -470,8 +470,9 @@ body {
   text-align: center;
 }*/
 .social{
+  display: block;
   text-align: center;
-  margin: 20px 0 50px 0;
+  padding: 20px 0 110px 0;
 }
 .social img{
   width: 45px;
@@ -492,7 +493,7 @@ footer{
   font-weight: 700;
   background-color: #fbc700;
   padding: 10px;
-  margin: 60px 0 0 0;
+  margin: 0 0 0 0;
   font-size: 13px;
 }
 
