@@ -70,7 +70,7 @@ $(function() {
 
   $('#scroll-down-section-1 a').on('click', function(e) {
     e.preventDefault();
-    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 40}, 500, 'linear');
   });
 
   $("#scroll-top-button").on('click', function(e) {
