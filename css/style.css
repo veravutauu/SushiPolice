@@ -187,7 +187,7 @@ body {
 .section-padding {
   /*margin-top: 50px;*/
   padding-right: 40px;
-  padding-left: 10px;
+  padding-left: 15px;
   margin: 30px 0 0 0;
 }
 .heading_margin{
@@ -566,6 +566,10 @@ footer{
   }
   .centering_text{
     text-align: center;
+  }
+  .headline h2{
+   margin: 40px 0 60px 60px;
+   font-size: 20px;
   }
 
   #img-deco-message-banner .background {
