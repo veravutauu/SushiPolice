@@ -65,13 +65,9 @@ $(function() {
     isNavBarShowing = $(window).width() >= 768;
   });
 
-<<<<<<< HEAD
-  $('#navbarNavAltMarkup').on('show.bs.collapse', function() {
-=======
   $('#nav-brand').hide()
 
   $('#navbarNavAltMarkup').on('show.bs.collapse', function() {    
->>>>>>> c13e1895e4bd1992551d303b5ae7a39524ca6955
     $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });
   });
 
