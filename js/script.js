@@ -42,10 +42,16 @@ $(window).scroll(function () {
     shouldNavbarTransparent = false
     $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });
     $('#nav-brand').show()
+    if($('#my-navbar .navbar-collapse ul').hasClass('navbar-ul-margin-auto')) {
+      $('#my-navbar .navbar-collapse ul').removeClass('navbar-ul-margin-auto')
+    }
   } else {
     shouldNavbarTransparent = true
     $('#my-navbar').css({ 'background-color': 'transparent' });
     $('#nav-brand').hide()
+    if(!$('#my-navbar .navbar-collapse ul').hasClass('navbar-ul-margin-auto')) {
+      $('#my-navbar .navbar-collapse ul').addClass('navbar-ul-margin-auto')
+    }
   }
   // Hide scroll-top-button if firstSection is shown
   if (windowScrollTop > 20) {
@@ -64,8 +70,6 @@ $(function() {
   $(window).resize(function() {
     isNavBarShowing = $(window).width() >= 768;
   });
-
-  $('#nav-brand').hide()
 
   $('#navbarNavAltMarkup').on('show.bs.collapse', function() {    
     $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });

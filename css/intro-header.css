@@ -1,5 +1,6 @@
 #nav-brand {
   font-size: 30px;
+  display: none;
 }
 
 #my-navbar {
@@ -28,6 +29,14 @@
   text-align: center;
   /* height: 44px;
   line-height: 44px; */
+}
+
+.navbar-ul-margin-auto {
+  margin: 0 auto !important;
+}
+
+.navbar-ul-margin-auto li {
+  min-width: 150px;
 }
 
 #logo {
