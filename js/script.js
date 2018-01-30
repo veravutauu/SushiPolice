@@ -65,6 +65,8 @@ $(function() {
     isNavBarShowing = $(window).width() >= 768;
   });
 
+  $('#nav-brand').hide()
+
   $('#navbarNavAltMarkup').on('show.bs.collapse', function() {    
     $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });
   });
