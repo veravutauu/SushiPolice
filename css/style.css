@@ -21,13 +21,14 @@ h4 {
   letter-spacing: 1px;
 }
 .utensil-wrapper h4{
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   margin: 15px 0 10px 0;
   line-height: 1.5;
 }
 .utensil-wrapper p{
   margin: 0 0 20px 0;
+  font-size: 12px;
 }
 p{
   letter-spacing: 1px;
@@ -90,12 +91,12 @@ body {
   width: 100%;
 }
 .underline{
-  border-bottom: 3px solid #fbc700;
+  border-bottom: 3px solid #f8b500;
   width: 150px;
   margin-bottom: 30px;
 }
 .underline_1{
-  border-bottom: 2px solid #fbc700;
+  border-bottom: 2px solid #f8b500;
   width: 80px;
   margin-bottom: 10px;
 }
@@ -107,6 +108,7 @@ body {
 
 .side-img img {
   width: 100%;
+  margin-bottom: 40px;
 }
 .vertical-horizontal{
   text-align: center;
@@ -133,7 +135,7 @@ body {
 }
 .right-pane {
   content: "";
-  background-color: #fbc700;
+  background-color: #f8b500;
   width: 25px;
   top: 0;
   right: 0;
@@ -178,7 +180,7 @@ body {
   transform: translateX(-50%);
   height: 22px;
   width: 100vw;
-  background-color: #fbc700;
+  background-color: #f8b500;
   filter: drop-shadow(0 3px 1px rgba(0,0,0,0.3));
   -webkit-filter:drop-shadow(0 3px 1px rgba(0,0,0,0.3));
   margin: 60px 0 60px 0;
@@ -201,14 +203,14 @@ body {
 
 .message-banner {
   margin: 0px -20px 8px 12px;
-  color: white;
+  color: black;
   background: none;
   padding: 12px;
   position: relative;
 }
 
 .message-banner .background {
-  background-color: #fbc700;
+  background-color: #f8b500;
   width: 100%;
   height: 100%;
 
@@ -225,13 +227,13 @@ body {
   z-index: 1000;
   margin: 0;
   position: relative;
-  font-weight: 600;
+  font-weight: 700;
   /*display: block;*/
 }
 
 #img-deco-message-banner .background-2 {
   display: none;
-  background-color: #fbc700;
+  background-color: #f8b500;
   width: 100%;
   height: 100px !important;
   top: 50%;
@@ -571,6 +573,15 @@ footer{
   .headline h2{
    margin: 40px 0 60px 60px;
    font-size: 20px;
+  }
+  .utensil-wrapper img{
+    width: 80px;
+    height: 80px;
+  }
+  .utensil-wrapper p{
+    font-size: 14px;
+    max-width: 75%;
+    margin: 0 0 30px 0;
   }
 
   #img-deco-message-banner .background {
