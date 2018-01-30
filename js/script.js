@@ -41,9 +41,11 @@ $(window).scroll(function () {
   if (windowScrollTop > (firstSection - viewPortSize)) {
     shouldNavbarTransparent = false
     $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });
+    $('#nav-brand').show()
   } else {
     shouldNavbarTransparent = true
     $('#my-navbar').css({ 'background-color': 'transparent' });
+    $('#nav-brand').hide()
   }
   // Hide scroll-top-button if firstSection is shown
   if (windowScrollTop > 20) {
