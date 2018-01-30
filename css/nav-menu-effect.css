@@ -1,0 +1,111 @@
+nav li {
+  padding: 0 !important;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  /* 要素を横並びにしている */
+  display: inline-block;
+  /* メニューの大きさ */
+  /* width: 200px;
+  height: 60px; */
+
+  position: relative; /* 絶対つける */
+  text-align: center;
+}
+
+nav li a {
+  /* 高さと横幅を指定できるようにする */
+  display: block;
+  /* nav li と大きさを合わせる */
+  width: 100%;
+  height: 100%;
+
+  position: relative; /* 絶対つける */
+
+  /* 高さの真ん中に文字を持ってくる */
+  line-height: 60px; /* nav li の heightと同じ値にする */
+
+  color: #f5850b;
+  text-decoration: none; /* 下線を消す */
+}
+
+/* 上 */
+ nav li:before {
+  /* おまじない */
+  content: "";
+  display: block;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 500ms; /* アニメーションの速さ */
+
+  /* 帯の幅 */
+  height: 5px;
+  background-color: #f5850b; /* 好きな色 */
+}
+
+nav li:hover:before {
+  width: 100%;
+}
+
+ /* 右 */
+nav li:after {
+  /* おまじない */
+  content: "";
+  display: block;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 500ms; /* アニメーションの速さ */
+
+  /* 帯の幅 */
+  width: 5px;
+  background-color: #f5850b; /* 好きな色 */
+}
+nav li:hover:after {
+  height: 100%;
+}
+
+ /* 下 */
+nav a:before {
+  /* おまじない */
+  content: "";
+  display: block;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: 500ms; /* アニメーションの速さ */
+
+  /* 帯の幅 */
+  height: 5px;
+  background-color: #f5850b; /* 好きな色 */
+}
+nav a:hover:before {
+  width: 100%;
+}
+
+ /* 左 */
+nav a:after {
+  /* おまじない */
+  content: "";
+  display: block;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 500ms; /* アニメーションの速さ */
+
+  /* 帯の幅 */
+  width: 5px;
+  background-color: #f5850b; /* 好きな色 */
+}
+nav a:hover:after {
+  height: 100%;
+}
