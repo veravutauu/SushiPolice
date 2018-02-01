@@ -1,11 +1,6 @@
-var allClasses = [
-  '.dialog-1 .dialog',
-  '.dialog-1 .character',
-  '.dialog-2 .dialog',
-  '.dialog-2 .character',
-];
-
 var didShowDialogAnimation = false;
+
+var ANIMAT_DURATION_EACH_SECTION = 800;
 
 var ANIMATED_DURATION = 700;
 var delays = [
@@ -18,6 +13,7 @@ var delays = [
 var shouldNavbarTransparent = true;
 
 function updateOnScroll() {
+  
   var firstSection = $("#current-situation").offset().top;
 
   var bottomOfIntroHeader = $(".intro-header").offset();
@@ -34,25 +30,32 @@ function updateOnScroll() {
 
     didShowDialogAnimation = true
 
+    var allClasses = [
+      '.dialog-1 .dialog',
+      '.dialog-1 .character',
+      '.dialog-2 .dialog',
+      '.dialog-2 .character',
+    ];
+
     allClasses.forEach(function(item, i) {
       $(item).css('opacity','0').delay(delays[i]).animate({ 'opacity': '1' });
     });
   }
 
   if (windowScrollTop > (viewPortSize - 80)) {
-    if (!isNavBarShowing) {
-      console.log('hide!')
+    if (isNavBarShowing) {
+      
+      shouldNavbarTransparent = false
+
+      $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });    
+      $('#my-navbar').show()
+
+      $('#nav-brand').show()
+      if($('#my-navbar .navbar-collapse ul').hasClass('navbar-ul-margin-auto')) {
+        $('#my-navbar .navbar-collapse ul').removeClass('navbar-ul-margin-auto')
+      }
+    } else {
       $('#my-navbar').hide()
-      return;
-    };
-    shouldNavbarTransparent = false
-
-    $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });    
-    $('#my-navbar').show()
-
-    $('#nav-brand').show()
-    if($('#my-navbar .navbar-collapse ul').hasClass('navbar-ul-margin-auto')) {
-      $('#my-navbar .navbar-collapse ul').removeClass('navbar-ul-margin-auto')
     }
   } else {
     shouldNavbarTransparent = true
@@ -69,6 +72,19 @@ function updateOnScroll() {
   } else {
     $('#scroll-top-button').css({ opacity: "0.0 "});
   }
+
+  let $sections = $(".section")
+  $.each($sections, function(indx, _el) {
+    var el = $(_el)
+    var topDivHeight = el.offset().top;
+    var viewPortSize = $(window).height();
+
+    var windowScrollTop = $(window).scrollTop();
+    if (windowScrollTop > topDivHeight - viewPortSize + 44 && !el.hasClass('section-faded-in')) {
+      el.animate({ opacity: "1.0" }, ANIMAT_DURATION_EACH_SECTION)
+      el.addClass('section-faded-in')
+    }
+  })
 }
 
 $(window).scroll(updateOnScroll);
@@ -78,6 +94,10 @@ var isNavBarShowing = false;
 var CHARACTER_ANIMATION_DURATION = 500;
 // On web load
 $(function() {
+
+  $.each($('.section'), function(index, el) {
+    $(el).css({ opacity: "0.0" })
+  })
 
   isNavBarShowing = $(window).width() >= 768;
   
