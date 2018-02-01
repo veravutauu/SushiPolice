@@ -17,9 +17,10 @@ var delays = [
 
 var shouldNavbarTransparent = true;
 
-$(window).scroll(function () {
-
+function updateOnScroll() {
   var firstSection = $("#current-situation").offset().top;
+
+  var bottomOfIntroHeader = $(".intro-header").offset();
 
   var windowScrollTop = $(window).scrollTop();
 
@@ -34,20 +35,23 @@ $(window).scroll(function () {
     didShowDialogAnimation = true
 
     allClasses.forEach(function(item, i) {
-      $(item).css('opacity','0').delay(delays[i]).animate({ 'opacity': '1' })
-    })
+      $(item).css('opacity','0').delay(delays[i]).animate({ 'opacity': '1' });
+    });
   }
 
-  if (windowScrollTop > (firstSection - viewPortSize)) {
+  if (windowScrollTop > (viewPortSize)) {
+    if (!isNavBarShowing) return;
     shouldNavbarTransparent = false
-    $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });
+    $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });    
+    $('#my-navbar').show()
     $('#nav-brand').show()
     if($('#my-navbar .navbar-collapse ul').hasClass('navbar-ul-margin-auto')) {
       $('#my-navbar .navbar-collapse ul').removeClass('navbar-ul-margin-auto')
     }
   } else {
     shouldNavbarTransparent = true
-    $('#my-navbar').css({ 'background-color': 'transparent' });
+    // $('#my-navbar').css({ 'background-color': 'transparent' });
+    $('#my-navbar').hide()
     $('#nav-brand').hide()
     if(!$('#my-navbar .navbar-collapse ul').hasClass('navbar-ul-margin-auto')) {
       $('#my-navbar .navbar-collapse ul').addClass('navbar-ul-margin-auto')
@@ -59,7 +63,9 @@ $(window).scroll(function () {
   } else {
     $('#scroll-top-button').css({ opacity: "0.0 "});
   }
-});
+}
+
+$(window).scroll(updateOnScroll);
 
 
 var isNavBarShowing = false;
@@ -67,9 +73,13 @@ var CHARACTER_ANIMATION_DURATION = 500;
 // On web load
 $(function() {
 
+  isNavBarShowing = $(window).width() >= 768;
+  
   $(window).resize(function() {
     isNavBarShowing = $(window).width() >= 768;
   });
+
+  updateOnScroll()
 
   $('#navbarNavAltMarkup').on('show.bs.collapse', function() {    
     $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });

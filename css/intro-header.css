@@ -1,3 +1,7 @@
+#my-navbar {
+  display: none;
+}
+
 #nav-brand {
   font-size: 30px;
   display: none;
@@ -9,11 +13,12 @@
   display: none;
 }
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   #my-navbar {
     display: inherit;
+    display: none;
   }
-}
+} */
 
 #my-navbar .navbar-nav li {
   margin: auto 0;
