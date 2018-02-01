@@ -1,11 +1,6 @@
-var allClasses = [
-  '.dialog-1 .dialog',
-  '.dialog-1 .character',
-  '.dialog-2 .dialog',
-  '.dialog-2 .character',
-];
-
 var didShowDialogAnimation = false;
+
+var ANIMAT_DURATION_EACH_SECTION = 800;
 
 var ANIMATED_DURATION = 700;
 var delays = [
@@ -18,6 +13,7 @@ var delays = [
 var shouldNavbarTransparent = true;
 
 function updateOnScroll() {
+  
   var firstSection = $("#current-situation").offset().top;
 
   var bottomOfIntroHeader = $(".intro-header").offset();
@@ -34,21 +30,32 @@ function updateOnScroll() {
 
     didShowDialogAnimation = true
 
+    var allClasses = [
+      '.dialog-1 .dialog',
+      '.dialog-1 .character',
+      '.dialog-2 .dialog',
+      '.dialog-2 .character',
+    ];
+
     allClasses.forEach(function(item, i) {
       $(item).css('opacity','0').delay(delays[i]).animate({ 'opacity': '1' });
     });
   }
 
-  if (windowScrollTop > (viewPortSize)) {
-    if (!isNavBarShowing) return;
-    shouldNavbarTransparent = false
+  if (windowScrollTop > (viewPortSize - 80)) {
+    if (isNavBarShowing) {
+      
+      shouldNavbarTransparent = false
 
-    $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });    
-    $('#my-navbar').show()
+      $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });    
+      $('#my-navbar').show()
 
-    $('#nav-brand').show()
-    if($('#my-navbar .navbar-collapse ul').hasClass('navbar-ul-margin-auto')) {
-      $('#my-navbar .navbar-collapse ul').removeClass('navbar-ul-margin-auto')
+      $('#nav-brand').show()
+      if($('#my-navbar .navbar-collapse ul').hasClass('navbar-ul-margin-auto')) {
+        $('#my-navbar .navbar-collapse ul').removeClass('navbar-ul-margin-auto')
+      }
+    } else {
+      $('#my-navbar').hide()
     }
   } else {
     shouldNavbarTransparent = true
@@ -65,6 +72,19 @@ function updateOnScroll() {
   } else {
     $('#scroll-top-button').css({ opacity: "0.0 "});
   }
+
+  let $sections = $(".section")
+  $.each($sections, function(indx, _el) {
+    var el = $(_el)
+    var topDivHeight = el.offset().top;
+    var viewPortSize = $(window).height();
+
+    var windowScrollTop = $(window).scrollTop();
+    if (windowScrollTop > topDivHeight - viewPortSize + 44 && !el.hasClass('section-faded-in')) {
+      el.animate({ opacity: "1.0" }, ANIMAT_DURATION_EACH_SECTION)
+      el.addClass('section-faded-in')
+    }
+  })
 }
 
 $(window).scroll(updateOnScroll);
@@ -72,13 +92,54 @@ $(window).scroll(updateOnScroll);
 
 var isNavBarShowing = false;
 var CHARACTER_ANIMATION_DURATION = 500;
+
+
+
+
 // On web load
 $(function() {
+
+  // Wrap every letter in a span
+$('.ml12').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+$('.ml12').css({ 'opacity': '1' })
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml12 .letter',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: function(el, i) {
+      return 500 + 30 * i;
+    },
+    complete: function() {
+      $('.opening').fadeOut()
+      animateIntro()
+    }
+  });
+
+
+
+
+
+
+  $.each($('.section'), function(index, el) {
+    $(el).css({ opacity: "0.0" })
+  })
 
   isNavBarShowing = $(window).width() >= 768;
   
   $(window).resize(function() {
     isNavBarShowing = $(window).width() >= 768;
+    if (!isNavBarShowing || shouldNavbarTransparent) {
+      $('#my-navbar').hide();
+    } else {
+      $('#my-navbar').show();
+    }
   });
 
   updateOnScroll()
@@ -109,6 +170,10 @@ $(function() {
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - (isNavBarShowing ? 100 : 70)}, 600, 'linear');
   });
 
+  
+});
+
+function animateIntro() {
   // Animate Intro
   $(".clip-1 .clip-image-wrapper").animate({
     left: "+=32px",
@@ -160,4 +225,4 @@ $(function() {
       opacity: 1
     }, ANIMATE_TIME_OF_EACH_CHARACTER);
   });
-});
+}
