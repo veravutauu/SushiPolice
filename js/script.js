@@ -42,12 +42,10 @@ function updateOnScroll() {
   if (windowScrollTop > (viewPortSize)) {
     if (!isNavBarShowing) return;
     shouldNavbarTransparent = false
-<<<<<<< HEAD
-    $('#my-navbar').css({ 'background-color': 'rgba(43,43,43,1' });
-=======
+
     $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });    
     $('#my-navbar').show()
->>>>>>> e5dcad8fb2a890eabe4cef8e9ee19975d8f3df69
+
     $('#nav-brand').show()
     if($('#my-navbar .navbar-collapse ul').hasClass('navbar-ul-margin-auto')) {
       $('#my-navbar .navbar-collapse ul').removeClass('navbar-ul-margin-auto')
@@ -83,13 +81,10 @@ $(function() {
     isNavBarShowing = $(window).width() >= 768;
   });
 
-<<<<<<< HEAD
-  $('#navbarNavAltMarkup').on('show.bs.collapse', function() {
-=======
   updateOnScroll()
 
   $('#navbarNavAltMarkup').on('show.bs.collapse', function() {    
->>>>>>> e5dcad8fb2a890eabe4cef8e9ee19975d8f3df69
+
     $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });
   });
 
