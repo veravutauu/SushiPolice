@@ -1,5 +1,5 @@
 #nav-brand {
-  font-size: 30px;
+  font-size: 25px;
   display: none;
 }
 
@@ -7,6 +7,7 @@
   z-index: 6000;
   width: 100%;
   display: none;
+  opacity: 0.9;
 }
 
 @media only screen and (min-width: 768px) {
@@ -16,10 +17,10 @@
 }
 
 #my-navbar .navbar-nav li {
+  padding: 20px;
   margin: auto 0;
   display: block;
-  padding: 10px 20px 0 15px;
-  text-decoration: underline #f8b500;
+  padding: 10px 10px 0 15px;
   -webkit-filter:drop-shadow(0 5px 10px #000000);
 }
 
@@ -27,6 +28,7 @@
   color: white;
   font-weight: 700;
   text-align: center;
+  margin: 0 15px 0 15px;
   /* height: 44px;
   line-height: 44px; */
 }
@@ -92,7 +94,7 @@
     transform: none;
     width: 30vw;
     height: auto;
-    max-width: 260px;
+    max-width: 180px;
   }
 }
 

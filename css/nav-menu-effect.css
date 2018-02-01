@@ -24,9 +24,9 @@ nav li a {
   position: relative; /* 絶対つける */
 
   /* 高さの真ん中に文字を持ってくる */
-  line-height: 60px; /* nav li の heightと同じ値にする */
+  line-height: 50px; /* nav li の heightと同じ値にする */
 
-  color: #f5850b;
+  color: #white;
   text-decoration: none; /* 下線を消す */
 }
 
@@ -43,7 +43,7 @@ nav li a {
 
   /* 帯の幅 */
   height: 5px;
-  background-color: #f5850b; /* 好きな色 */
+  background-color: #f8b500; /* 好きな色 */
 }
 
 nav li:hover:before {
@@ -63,7 +63,7 @@ nav li:after {
 
   /* 帯の幅 */
   width: 5px;
-  background-color: #f5850b; /* 好きな色 */
+  background-color: #f8b500; /* 好きな色 */
 }
 nav li:hover:after {
   height: 100%;
@@ -82,7 +82,7 @@ nav a:before {
 
   /* 帯の幅 */
   height: 5px;
-  background-color: #f5850b; /* 好きな色 */
+  background-color: #f8b500; /* 好きな色 */
 }
 nav a:hover:before {
   width: 100%;
@@ -101,7 +101,7 @@ nav a:after {
 
   /* 帯の幅 */
   width: 5px;
-  background-color: #f5850b; /* 好きな色 */
+  background-color: #f8b500; /* 好きな色 */
 }
 nav a:hover:after {
   height: 100%;

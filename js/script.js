@@ -40,7 +40,7 @@ $(window).scroll(function () {
 
   if (windowScrollTop > (firstSection - viewPortSize)) {
     shouldNavbarTransparent = false
-    $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });
+    $('#my-navbar').css({ 'background-color': 'rgba(43,43,43,1' });
     $('#nav-brand').show()
     if($('#my-navbar .navbar-collapse ul').hasClass('navbar-ul-margin-auto')) {
       $('#my-navbar .navbar-collapse ul').removeClass('navbar-ul-margin-auto')
@@ -71,7 +71,7 @@ $(function() {
     isNavBarShowing = $(window).width() >= 768;
   });
 
-  $('#navbarNavAltMarkup').on('show.bs.collapse', function() {    
+  $('#navbarNavAltMarkup').on('show.bs.collapse', function() {
     $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });
   });
 
@@ -83,7 +83,7 @@ $(function() {
 
   $('#scroll-down-section-1 a').on('click', function(e) {
     e.preventDefault();
-    $('html, body').animate({ scrollTop: ($($(this).attr('href')).offset().top - (isNavBarShowing ? 100 : 40)) }, 500, 'linear');
+    $('html, body').animate({ scrollTop: ($($(this).attr('href')).offset().top - (isNavBarShowing ? 100 : 120)) }, 500, 'linear');
   });
 
   $("#scroll-top-button").on('click', function(e) {
@@ -115,6 +115,7 @@ $(function() {
   $("#logo").delay(CHARACTER_ANIMATION_DURATION*3).animate({
     opacity: "1.0",
   }, CHARACTER_ANIMATION_DURATION);
+  
 
 
 
