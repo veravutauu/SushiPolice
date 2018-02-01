@@ -92,8 +92,40 @@ $(window).scroll(updateOnScroll);
 
 var isNavBarShowing = false;
 var CHARACTER_ANIMATION_DURATION = 500;
+
+
+
+
 // On web load
 $(function() {
+
+  // Wrap every letter in a span
+$('.ml12').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+$('.ml12').css({ 'opacity': '1' })
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml12 .letter',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: function(el, i) {
+      return 500 + 30 * i;
+    },
+    complete: function() {
+      $('.opening').fadeOut()
+      animateIntro()
+    }
+  });
+
+
+
+
+
 
   $.each($('.section'), function(index, el) {
     $(el).css({ opacity: "0.0" })
@@ -103,7 +135,7 @@ $(function() {
   
   $(window).resize(function() {
     isNavBarShowing = $(window).width() >= 768;
-    if (!isNavBarShowing) {
+    if (!isNavBarShowing || shouldNavbarTransparent) {
       $('#my-navbar').hide();
     } else {
       $('#my-navbar').show();
@@ -138,6 +170,10 @@ $(function() {
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - (isNavBarShowing ? 100 : 70)}, 600, 'linear');
   });
 
+  
+});
+
+function animateIntro() {
   // Animate Intro
   $(".clip-1 .clip-image-wrapper").animate({
     left: "+=32px",
@@ -189,4 +225,4 @@ $(function() {
       opacity: 1
     }, ANIMATE_TIME_OF_EACH_CHARACTER);
   });
-});
+}
