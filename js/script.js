@@ -39,8 +39,12 @@ function updateOnScroll() {
     });
   }
 
-  if (windowScrollTop > (viewPortSize)) {
-    if (!isNavBarShowing) return;
+  if (windowScrollTop > (viewPortSize - 80)) {
+    if (!isNavBarShowing) {
+      console.log('hide!')
+      $('#my-navbar').hide()
+      return;
+    };
     shouldNavbarTransparent = false
 
     $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });    
@@ -79,6 +83,11 @@ $(function() {
   
   $(window).resize(function() {
     isNavBarShowing = $(window).width() >= 768;
+    if (!isNavBarShowing) {
+      $('#my-navbar').hide();
+    } else {
+      $('#my-navbar').show();
+    }
   });
 
   updateOnScroll()
