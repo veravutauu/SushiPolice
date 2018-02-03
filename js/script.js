@@ -13,7 +13,7 @@ var delays = [
 var shouldNavbarTransparent = true;
 
 function updateOnScroll() {
-  
+
   var firstSection = $("#current-situation").offset().top;
 
   var bottomOfIntroHeader = $(".intro-header").offset();
@@ -44,10 +44,10 @@ function updateOnScroll() {
 
   if (windowScrollTop > (viewPortSize - 80)) {
     if (isNavBarShowing) {
-      
+
       shouldNavbarTransparent = false
 
-      $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });    
+      $('#my-navbar').css({ 'background-color': '#2b2b2b' });
       $('#my-navbar').show()
 
       $('#nav-brand').show()
@@ -131,10 +131,10 @@ anime.timeline({loop: false})
     $(el).css({ opacity: "0.0" })
   })
 
-  isNavBarShowing = $(window).width() >= 768;
-  
+  isNavBarShowing = $(window).width() >= 800;
+
   $(window).resize(function() {
-    isNavBarShowing = $(window).width() >= 768;
+    isNavBarShowing = $(window).width() >= 800;
     if (!isNavBarShowing || shouldNavbarTransparent) {
       $('#my-navbar').hide();
     } else {
@@ -144,9 +144,9 @@ anime.timeline({loop: false})
 
   updateOnScroll()
 
-  $('#navbarNavAltMarkup').on('show.bs.collapse', function() {    
+  $('#navbarNavAltMarkup').on('show.bs.collapse', function() {
 
-    $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,0.5)' });
+    $('#my-navbar').css({ 'background-color': 'rgba(0,0,0,1)' });
   });
 
   $('#navbarNavAltMarkup').on('hidden.bs.collapse', function() {
@@ -170,7 +170,7 @@ anime.timeline({loop: false})
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - (isNavBarShowing ? 100 : 70)}, 600, 'linear');
   });
 
-  
+
 });
 
 function animateIntro() {
@@ -193,7 +193,7 @@ function animateIntro() {
   $("#logo").delay(CHARACTER_ANIMATION_DURATION*3).animate({
     opacity: "1.0",
   }, CHARACTER_ANIMATION_DURATION);
-  
+
 
 
 
