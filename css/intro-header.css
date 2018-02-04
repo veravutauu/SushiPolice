@@ -43,6 +43,27 @@
   line-height: 44px; */
 }
 
+.navbar-effect {
+  position: relative;
+}
+
+.navbar-effect::before {
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100% !important;
+  height: 2px;
+  display: block;
+  position: absolute;
+  background-color: #f8b500;
+  transform: scaleX(0);
+  transition: transform .3s ease;
+}
+
+.navbar-effect:hover:before {
+  transform: scaleX(1);
+}
+
 .navbar-ul-margin-auto {
   margin: 0 auto !important;
 }
