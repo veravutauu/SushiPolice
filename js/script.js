@@ -99,6 +99,8 @@ var CHARACTER_ANIMATION_DURATION = 500;
 // On web load
 $(function() {
 
+  setupModal()
+
   grid_img_columns = $('.grid-img-column');
 
   // Wrap every letter in a span
@@ -252,5 +254,31 @@ function grid_img_four_columns() {
   for (i = 0; i < elements.length; i++) {
       elements[i].style.msFlex = "25%";  // IE10
       elements[i].style.flex = "25%";
+  }
+}
+
+function setupModal() {
+    // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var imgs = $('.my-img')
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+
+  $.each(imgs, function(idx, img) {
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+  })
+
+  // Get the <span> element that closes the modal
+  var span = $('.my-modal .close')[0]
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+      modal.style.display = "none";
   }
 }
