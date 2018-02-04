@@ -509,6 +509,9 @@ footer{
   width: 100%;
   display: block;
 }
+.grid_img{
+  width: 100%;
+}
 
 @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
 @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */
