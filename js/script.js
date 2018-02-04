@@ -99,6 +99,8 @@ var CHARACTER_ANIMATION_DURATION = 500;
 // On web load
 $(function() {
 
+  grid_img_columns = $('.grid-img-column');
+
   // Wrap every letter in a span
 $('.ml12').each(function(){
   $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
@@ -122,11 +124,6 @@ anime.timeline({loop: false})
     }
   });
 
-
-
-
-
-
   $.each($('.section'), function(index, el) {
     $(el).css({ opacity: "0.0" })
   })
@@ -137,8 +134,10 @@ anime.timeline({loop: false})
     isNavBarShowing = $(window).width() >= 800;
     if (!isNavBarShowing || shouldNavbarTransparent) {
       $('#my-navbar').hide();
+      grid_img_two_columns();
     } else {
       $('#my-navbar').show();
+      grid_img_three_columns();
     }
   });
 
@@ -225,4 +224,24 @@ function animateIntro() {
       opacity: 1
     }, ANIMATE_TIME_OF_EACH_CHARACTER);
   });
+}
+
+var grid_img_columns = null
+
+// Two images side by side
+function grid_img_two_columns() {
+  var elements = grid_img_columns
+  for (i = 0; i < elements.length; i++) {
+      elements[i].style.msFlex = "50%";  // IE10
+      elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function grid_img_three_columns() {
+  var elements = grid_img_columns
+  for (i = 0; i < elements.length; i++) {
+      elements[i].style.msFlex = "33%";  // IE10
+      elements[i].style.flex = "33%";
+  }
 }
