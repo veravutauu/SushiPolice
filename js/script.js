@@ -130,17 +130,9 @@ anime.timeline({loop: false})
 
   isNavBarShowing = $(window).width() >= 800;
 
-  $(window).resize(function() {
-    isNavBarShowing = $(window).width() >= 800;
-    if (!isNavBarShowing || shouldNavbarTransparent) {
-      $('#my-navbar').hide();
-      grid_img_two_columns();
-    } else {
-      $('#my-navbar').show();
-      grid_img_three_columns();
-    }
-  });
+  $(window).resize(updateOnResize);
 
+  updateOnResize()
   updateOnScroll()
 
   $('#navbarNavAltMarkup').on('show.bs.collapse', function() {
@@ -171,6 +163,23 @@ anime.timeline({loop: false})
 
 
 });
+
+var isShowingTwoColumns = true
+
+function updateOnResize() {
+  isNavBarShowing = $(window).width() >= 800;
+    if (!isNavBarShowing || shouldNavbarTransparent) {
+      $('#my-navbar').hide();
+    } else {
+      $('#my-navbar').show();
+    }
+
+    if (isNavBarShowing) {
+      grid_img_four_columns();
+    } else {
+      grid_img_two_columns();
+    }
+}
 
 function animateIntro() {
   // Animate Intro
@@ -238,10 +247,10 @@ function grid_img_two_columns() {
 }
 
 // Four images side by side
-function grid_img_three_columns() {
+function grid_img_four_columns() {
   var elements = grid_img_columns
   for (i = 0; i < elements.length; i++) {
-      elements[i].style.msFlex = "33%";  // IE10
-      elements[i].style.flex = "33%";
+      elements[i].style.msFlex = "25%";  // IE10
+      elements[i].style.flex = "25%";
   }
 }
