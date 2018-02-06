@@ -278,7 +278,17 @@ function setupModal() {
   var span = $('.my-modal .close')[0]
 
   // When the user clicks on <span> (x), close the modal
-  span.onclick = function() { 
+  span.onclick = function() {
       modal.style.display = "none";
   }
 }
+
+window.addEventListener('scroll', () => {
+  let targets = Array.from(document.getElementsByClassName('before'))
+  targets.forEach(el => {
+    const elPos = el.offsetTop
+    const scroll = window.scrollY
+    const height = window.innerHeight * 0.1
+    scroll > elPos + height ? el.classList.remove('before') : null
+  })
+})
