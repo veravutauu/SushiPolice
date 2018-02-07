@@ -2,7 +2,7 @@ var didShowDialogAnimation = false;
 
 var ANIMAT_DURATION_EACH_SECTION = 800;
 
-var ANIMATED_DURATION = 700;
+var ANIMATED_DURATION = 500;
 var delays = [
   ANIMATED_DURATION,
   0,
@@ -116,7 +116,7 @@ anime.timeline({loop: false})
     translateZ: 0,
     opacity: [0,1],
     easing: "easeOutExpo",
-    duration: 1200,
+    duration: 1500,
     delay: function(el, i) {
       return 500 + 30 * i;
     },
