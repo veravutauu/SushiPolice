@@ -1,6 +1,6 @@
 var didShowDialogAnimation = false;
 
-var ANIMAT_DURATION_EACH_SECTION = 800;
+var ANIMAT_DURATION_EACH_SECTION = 600;
 
 var ANIMATED_DURATION = 500;
 var delays = [
