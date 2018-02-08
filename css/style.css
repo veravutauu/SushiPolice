@@ -115,7 +115,7 @@ body {
 .side-img img {
   width: 100%;
   margin-bottom: 40px;
-  transition: transform 1s;
+  /* transition: transform 1s; */
 }
 
 .content {
@@ -366,9 +366,9 @@ body {
 .vs-img.before{
   transform: translateX(60px);
 }
-.side-img .before img{
+/* .side-img .before img{
   transform: translateX(-30px);
-}
+} */
 .big-img{
   transition: 1s;
 }
@@ -800,3 +800,20 @@ footer{
 
 /**/
 /* -webkit-filter:drop-shadow(0 5px 10px #000000); */
+
+.fadein-img {
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+.fadein-img.transition-delay-1s {
+  transition-delay: 1s !important;
+}
+
+.fadein-img.transition-delay-2s {
+  transition-delay: 2s !important;
+}
+
+.fadein-img.before {
+  opacity: 0;
+}

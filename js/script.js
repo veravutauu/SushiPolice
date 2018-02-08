@@ -85,6 +85,30 @@ function updateOnScroll() {
       el.addClass('section-faded-in')
     }
   })
+
+  // let targets = Array.from(document.getElementsByClassName('before'))
+  // targets.forEach(el => {
+  //   const elPos = el.offsetTop
+  //   const scroll = window.scrollY
+  //   const height = window.innerHeight * 0.1
+  //   // if (el.classList.contains('fadein-img')) {
+  //   //   console.log('Found!', el.className)
+  //   //   console.log(scroll, elPos, height)
+  //   // }
+  //   if (scroll > elPos + height) {
+  //     el.classList.remove('before')
+  //     // console.log('--> remove', el.className, 'elPos = ', elPos, el.classList.contains('fadein-img') ? "****": "")
+  //   }
+  // })
+  $.each($('.before'), function(ind, _el) {
+    const el = $(_el);
+    const elPos = el.offset().top;
+    const scroll = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    if (scroll > elPos - windowHeight * 0.9) {
+      el.removeClass('before');
+    }
+  })
 }
 
 $(window).scroll(updateOnScroll);
@@ -282,13 +306,3 @@ function setupModal() {
       modal.style.display = "none";
   }
 }
-
-window.addEventListener('scroll', () => {
-  let targets = Array.from(document.getElementsByClassName('before'))
-  targets.forEach(el => {
-    const elPos = el.offsetTop
-    const scroll = window.scrollY
-    const height = window.innerHeight * 0.1
-    scroll > elPos + height ? el.classList.remove('before') : null
-  })
-})
